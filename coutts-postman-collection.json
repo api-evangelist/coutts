@@ -1,0 +1,36 @@
+{
+    "id": "87ab298a158622cfb4722967c00bff91",
+    "name": "Coutts",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "edc05dc137aebe65e790904ea0306b07",
+            "name": "Get Current Business Accounts",
+            "url": "httpsopenapi.coutts.comopen-banking\/v2.1\/business-current-accounts\/",
+            "description": "This endpoint can contain multiple brands owned by a particular banking group. Each brand can own multiple BCA products.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "87ab298a158622cfb4722967c00bff91",
+            "rawModeData": ""
+        }
+    ]
+}
