@@ -1,0 +1,105 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Coutts",
+        "description": "This is an OpenAPI definition for the standard set of Open Banking (http:\/\/openbankingapis.io\/) APIs froms Coutts.",
+        "termsOfService": "https:\/\/www.openbanking.org.uk\/open-licence\/"
+    },
+    "servers": [
+        "httpsopenapi.coutts.comopen-banking\/v2.1\/"
+    ],
+    "paths": {
+        "business-current-accounts\/": {
+            "get": {
+                "summary": "Get Current Business Accounts",
+                "description": "This endpoint can contain multiple brands owned by a particular banking group. Each brand can own multiple BCA products.",
+                "operationId": "GetCurentBusinessAccounts",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "atms": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "branches": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "personal_current_accounts": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "business_current_accounts": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "unsecured_sme_loans": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "commercial_credit_cards": {
+                "type": "object",
+                "properties": {
+                    "meta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
