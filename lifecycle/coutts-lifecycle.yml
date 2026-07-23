@@ -1,0 +1,19 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.bankofapis.com/ + OBIE Read/Write Standard
+versioning:
+  scheme: uri-path
+  current: v3.1
+  spec_version: v4.0 (OBIE Read/Write 4.0.1)
+  pattern: /open-banking/v{version}/{aisp|pisp|cbpii}
+  docs: https://www.bankofapis.com/documentation
+deprecation:
+  policy: API versions are retired in line with the OBIE Read/Write Standard release cycle and NatWest
+    Group Bank of APIs versioning; TPPs are notified of version end-of-life via the developer platform.
+  sunset_header: false
+sla:
+  note: Availability and performance are published on the Bank of APIs service status page under the CMA9
+    Open Banking availability/performance reporting obligations.
+status_page: https://www.bankofapis.com/performance/service-interruptions
+sandbox: https://developer.coutts.useinfinite.io/
+deprecated_operations: []

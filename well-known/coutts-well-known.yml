@@ -1,0 +1,28 @@
+generated: '2026-07-23'
+method: searched
+note: Coutts Open Banking gateway host api.coutts.com is mutual-TLS gated (HTTP 400 "No required SSL certificate
+  was sent") so its /.well-known/* discovery documents cannot be fetched anonymously. The published security.txt
+  lives at the corporate host under NatWest Group's shared Vulnerability Disclosure Program.
+hosts:
+- host: https://www.coutts.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: coutts-security.txt
+- host: https://api.coutts.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    note: mutual-TLS gated
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    note: mutual-TLS gated
+  - path: /.well-known/openid-configuration
+    status: 400
+    note: mutual-TLS gated
+- host: https://www.bankofapis.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404

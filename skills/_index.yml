@@ -1,0 +1,28 @@
+generated: '2026-07-23'
+method: generated
+source: openapi/ (OBIE Read/Write 4.0.1) + conventions/ + errors/
+skills:
+- file: coutts-retrieve-account-information.md
+  name: Retrieve account and transaction information (AIS)
+  api: openapi/coutts-account-info-openapi.yaml
+  operations:
+  - CreateAccountAccessConsents
+  - GetAccountAccessConsentsConsentId
+  - GetAccounts
+  - GetAccountsAccountIdBalances
+  - GetAccountsAccountIdTransactions
+- file: coutts-initiate-domestic-payment.md
+  name: Initiate a domestic payment (PIS)
+  api: openapi/coutts-payment-initiation-openapi.yaml
+  operations:
+  - CreateDomesticPaymentConsents
+  - GetDomesticPaymentConsentsConsentId
+  - CreateDomesticPayments
+  - GetDomesticPaymentsDomesticPaymentId
+- file: coutts-confirm-funds.md
+  name: Confirm available funds (CBPII)
+  api: openapi/coutts-confirmation-funds-openapi.yaml
+  operations:
+  - CreateFundsConfirmationConsents
+  - GetFundsConfirmationConsentsConsentId
+  - CreateFundsConfirmations

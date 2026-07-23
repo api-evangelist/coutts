@@ -1,0 +1,84 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/ (OBIE Read/Write 4.0.1 responses) + Open Banking Read/Write API error-code namespace
+format: obie-oberror
+note: OBIE Read/Write APIs do NOT use RFC 9457 problem+json. Errors use the OBIE OBErrorResponse1 envelope;
+  the high-level Code is an HTTP-status label, and each item in Errors[] carries a UK.OBIE.* ErrorCode
+  plus Message/Path/Url. Content is application/json (and application/jose+jwe for JWE-wrapped responses).
+envelope:
+  schema: OBErrorResponse1
+  fields:
+    Code: High-level textual error code (typically the HTTP status label).
+    Id: Unique reference (often mirrors x-fapi-interaction-id) for support correlation.
+    Message: Brief high-level error description.
+    Errors: Array of OBError1 { ErrorCode, Message, Path, Url }.
+http_statuses:
+- status: 400
+  title: Bad Request
+- status: 401
+  title: Unauthorized
+- status: 403
+  title: Forbidden
+- status: 404
+  title: Not Found
+- status: 405
+  title: Method Not Allowed
+- status: 406
+  title: Not Acceptable
+- status: 409
+  title: Conflict
+- status: 415
+  title: Unsupported Media Type
+- status: 422
+  title: Unprocessable Entity
+- status: 429
+  title: Too Many Requests
+- status: 500
+  title: Internal Server Error
+error_codes:
+- code: UK.OBIE.Field.Expected
+  meaning: A mandatory field was expected but not provided.
+- code: UK.OBIE.Field.Invalid
+  meaning: A field was provided in an invalid format or with an invalid value.
+- code: UK.OBIE.Field.Missing
+  meaning: A mandatory field is missing from the request.
+- code: UK.OBIE.Field.Unexpected
+  meaning: An unexpected field was received in the request.
+- code: UK.OBIE.Header.Invalid
+  meaning: A request header was provided in an invalid format or value.
+- code: UK.OBIE.Header.Missing
+  meaning: A mandatory request header (e.g. x-fapi-interaction-id) is missing.
+- code: UK.OBIE.Resource.ConsentMismatch
+  meaning: The resource requested does not match the granted consent.
+- code: UK.OBIE.Resource.InvalidConsentStatus
+  meaning: The consent is not in a status that permits this operation (e.g. not Authorised).
+- code: UK.OBIE.Resource.InvalidFormat
+  meaning: The resource identifier is in an invalid format.
+- code: UK.OBIE.Resource.NotFound
+  meaning: The requested resource could not be found.
+- code: UK.OBIE.Rules.AfterCutOffDateTime
+  meaning: The payment was received after the ASPSP cut-off time.
+- code: UK.OBIE.Rules.DuplicateReference
+  meaning: A duplicate reference was detected (idempotency / instruction identification).
+- code: UK.OBIE.Rules.FailsControlSum
+  meaning: The instructed file control sum does not match the payment file.
+- code: UK.OBIE.Rules.ResourceAlreadyExists
+  meaning: The resource already exists and cannot be recreated.
+- code: UK.OBIE.Signature.Invalid
+  meaning: The x-jws-signature detached JWS signature is invalid.
+- code: UK.OBIE.Signature.Missing
+  meaning: A required x-jws-signature detached JWS signature is missing.
+- code: UK.OBIE.Signature.MissingClaim
+  meaning: A mandatory claim is missing from the JWS signature.
+- code: UK.OBIE.Signature.Malformed
+  meaning: The JWS signature is malformed.
+- code: UK.OBIE.Unsupported.AccountIdentifier
+  meaning: The account identifier scheme is not supported.
+- code: UK.OBIE.Unsupported.Currency
+  meaning: The requested currency is not supported.
+- code: UK.OBIE.Unsupported.Frequency
+  meaning: The requested standing-order frequency is not supported.
+- code: UK.OBIE.Unsupported.Scheme
+  meaning: The requested scheme name is not supported by the ASPSP.
+- code: UK.OBIE.UnexpectedError
+  meaning: An unexpected error occurred at the ASPSP.

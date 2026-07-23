@@ -1,0 +1,6 @@
+# The NatWest Group Vulnerability Disclosure Program
+# For submissions, policy, scope and hall of fame please visit NatWest Group's Bugcrowd page.
+Contact: mailto:vdp@natwest.com
+Expires: 2027-12-31T23:59:00.000Z
+Preferred-Languages: en
+Policy: https://bugcrowd.com/natwest-vdp

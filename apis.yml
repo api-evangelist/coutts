@@ -2,22 +2,17 @@ aid: coutts
 url: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/apis.yml
 name: Coutts
 kind: company
-description: >-
-  Coutts & Co is a British private bank and wealth manager founded in 1692,
-  headquartered in London and serving high-net-worth individuals, families,
-  commercial and institutional clients. It is a wholly owned subsidiary of
-  NatWest Group (formerly The Royal Bank of Scotland Group), one of the UK
-  CMA9 banking groups mandated to deliver Open Banking. Coutts is authorised
-  by the Prudential Regulation Authority and regulated by the Financial
-  Conduct Authority and the PRA (FCA Firm Reference 001b000000MfEueAAF). As an
-  Account Servicing Payment Service Provider (ASPSP) it participates in UK Open
-  Banking under PSD2, exposing its account, payment and confirmation-of-funds
-  surfaces through NatWest Group's "Bank of APIs" developer platform. Those
-  Read/Write APIs conform to the Open Banking Implementation Entity (OBIE)
-  Read/Write Standard and are secured with FAPI-grade OAuth2/OIDC, PSD2 strong
-  customer authentication, and mutual-TLS client authentication using
-  OBIE/eIDAS certificates. Coutts additionally publishes OBIE Open Data
-  reference information for its commercial/business current accounts.
+description: Coutts & Co is a British private bank and wealth manager founded in 1692, headquartered in
+  London and serving high-net-worth individuals, families, commercial and institutional clients. It is
+  a wholly owned subsidiary of NatWest Group (formerly The Royal Bank of Scotland Group), one of the UK
+  CMA9 banking groups mandated to deliver Open Banking. Coutts is authorised by the Prudential Regulation
+  Authority and regulated by the Financial Conduct Authority and the PRA (FCA Firm Reference 001b000000MfEueAAF).
+  As an Account Servicing Payment Service Provider (ASPSP) it participates in UK Open Banking under PSD2,
+  exposing its account, payment and confirmation-of-funds surfaces through NatWest Group's "Bank of APIs"
+  developer platform. Those Read/Write APIs conform to the Open Banking Implementation Entity (OBIE) Read/Write
+  Standard and are secured with FAPI-grade OAuth2/OIDC, PSD2 strong customer authentication, and mutual-TLS
+  client authentication using OBIE/eIDAS certificates. Coutts additionally publishes OBIE Open Data reference
+  information for its commercial/business current accounts.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial Services
@@ -37,12 +32,10 @@ specificationVersion: '0.19'
 apis:
 - aid: coutts:coutts-account-transaction-api
   name: Coutts Account and Transaction Information API
-  description: >-
-    OBIE Read/Write Account and Transaction Information (AIS) API for Coutts,
-    letting FCA-authorised AISPs retrieve account, balance, transaction, party,
-    standing order, direct debit, beneficiary, product and statement data with
-    the customer's consent. Conforms to the OBIE Read/Write Standard and is
-    secured with FAPI OAuth2/OIDC, mTLS and PSD2 strong customer authentication.
+  description: OBIE Read/Write Account and Transaction Information (AIS) API for Coutts, letting FCA-authorised
+    AISPs retrieve account, balance, transaction, party, standing order, direct debit, beneficiary, product
+    and statement data with the customer's consent. Conforms to the OBIE Read/Write Standard and is secured
+    with FAPI OAuth2/OIDC, mTLS and PSD2 strong customer authentication.
   humanURL: https://www.bankofapis.com/products/coutts-open-banking
   baseURL: https://api.coutts.com/open-banking/v3.1/aisp
   tags:
@@ -56,14 +49,14 @@ apis:
     url: https://www.bankofapis.com/products/coutts-open-banking
   - type: APIReference
     url: https://www.bankofapis.com/documentation
+  - type: Overlay
+    url: overlays/coutts-account-info-overlay.yaml
 - aid: coutts:coutts-payment-initiation-api
   name: Coutts Payment Initiation API
-  description: >-
-    OBIE Read/Write Payment Initiation (PIS) API for Coutts, letting
-    FCA-authorised PISPs initiate domestic, scheduled, standing-order,
-    international and file payments on behalf of the account holder. Conforms to
-    the OBIE Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and
-    PSD2 strong customer authentication.
+  description: OBIE Read/Write Payment Initiation (PIS) API for Coutts, letting FCA-authorised PISPs initiate
+    domestic, scheduled, standing-order, international and file payments on behalf of the account holder.
+    Conforms to the OBIE Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and PSD2 strong
+    customer authentication.
   humanURL: https://www.bankofapis.com/products/coutts-open-banking
   baseURL: https://api.coutts.com/open-banking/v3.1/pisp
   tags:
@@ -77,14 +70,14 @@ apis:
     url: https://www.bankofapis.com/products/coutts-open-banking
   - type: APIReference
     url: https://www.bankofapis.com/documentation
+  - type: Overlay
+    url: overlays/coutts-payment-initiation-overlay.yaml
 - aid: coutts:coutts-confirmation-of-funds-api
   name: Coutts Confirmation of Funds API
-  description: >-
-    OBIE Read/Write Confirmation of Funds (CBPII) API for Coutts, letting
-    authorised Card Based Payment Instrument Issuers check whether sufficient
-    funds are available on an account before a transaction. Conforms to the OBIE
-    Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and PSD2
-    strong customer authentication.
+  description: OBIE Read/Write Confirmation of Funds (CBPII) API for Coutts, letting authorised Card Based
+    Payment Instrument Issuers check whether sufficient funds are available on an account before a transaction.
+    Conforms to the OBIE Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and PSD2 strong
+    customer authentication.
   humanURL: https://www.bankofapis.com/products/coutts-open-banking
   baseURL: https://api.coutts.com/open-banking/v3.1/cbpii
   tags:
@@ -98,16 +91,16 @@ apis:
     url: https://www.bankofapis.com/products/coutts-open-banking
   - type: APIReference
     url: https://www.bankofapis.com/documentation
+  - type: Overlay
+    url: overlays/coutts-confirmation-funds-overlay.yaml
 - aid: coutts:coutts-open-data-api
   name: Coutts Open Data API
-  description: >-
-    OBIE Open Data API for Coutts publishing PUBLIC, unauthenticated reference
-    data for its commercial/business current account products, following the
-    Open Banking Open Data Standard. As a private bank Coutts operates no retail
-    ATM or branch network, so it publishes product reference data rather than
-    ATM/Branch locator data. Base path shown follows the OBIE Open Data path
-    convention; the exact live open-data URL was not confirmed unauthenticated
-    (the api.coutts.com gateway is mutual-TLS gated).
+  description: OBIE Open Data API for Coutts publishing PUBLIC, unauthenticated reference data for its
+    commercial/business current account products, following the Open Banking Open Data Standard. As a
+    private bank Coutts operates no retail ATM or branch network, so it publishes product reference data
+    rather than ATM/Branch locator data. Base path shown follows the OBIE Open Data path convention; the
+    exact live open-data URL was not confirmed unauthenticated (the api.coutts.com gateway is mutual-TLS
+    gated).
   humanURL: https://www.bankofapis.com/products/coutts-open-banking
   baseURL: https://api.coutts.com/open-banking/v2.3/business-current-accounts
   tags:
@@ -120,6 +113,16 @@ apis:
   - type: APIReference
     url: https://documenter.getpostman.com/view/35240/TVCiUmZV
 common:
+- type: VulnerabilityDisclosure
+  url: security/coutts-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/coutts-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/coutts-agentic-access.yml
+- type: OAuthScopes
+  url: scopes/coutts-scopes.yml
+- type: Authentication
+  url: authentication/coutts-authentication.yml
 - type: Website
   url: https://www.coutts.com/
 - type: DeveloperPortal
@@ -142,6 +145,34 @@ common:
   url: https://www.coutts.com/important-information.html
 - type: PrivacyPolicy
   url: https://www.coutts.com/privacy-and-cookie-policy.html
+- type: WellKnown
+  url: well-known/coutts-well-known.yml
+- type: SecurityTxt
+  url: well-known/coutts-security.txt
+- type: Security
+  url: https://www.coutts.com/.well-known/security.txt
+- type: ErrorCatalog
+  url: errors/coutts-problem-types.yml
+- type: Conventions
+  url: conventions/coutts-conventions.yml
+- type: Idempotency
+  url: conventions/coutts-conventions.yml
+- type: Lifecycle
+  url: lifecycle/coutts-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/coutts-lifecycle.yml
+- type: Conformance
+  url: conformance/coutts-conformance.yml
+- type: DataModel
+  url: data-model/coutts-data-model.yml
+- type: MCPServer
+  url: mcp/coutts-mcp.yml
+- type: LLMsTxt
+  url: llms/coutts-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: GettingStarted
+  url: https://www.bankofapis.com/get-started
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

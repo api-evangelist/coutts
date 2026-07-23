@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Coutts Confirmation of Funds (CBPII)
+  version: 1.0.0
+extends: openapi/coutts-confirmation-funds-openapi.yaml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: coutts
+    x-apievangelist-standard: OBIE Read/Write API 4.0.1
+    x-apievangelist-aspsp: Coutts & Co (NatWest Group, CMA9)
+    x-apievangelist-security: FAPI 1.0 Advanced; OAuth2 (client_credentials TPP + authorization_code PSU/SCA);
+      mutual-TLS; detached JWS
+- target: $.servers
+  update:
+    description: Coutts production OBIE gateway is host api.coutts.com (mutual-TLS gated); base path per
+      server url.

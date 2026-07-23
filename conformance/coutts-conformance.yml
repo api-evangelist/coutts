@@ -1,0 +1,41 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/ securitySchemes + OBIE Read/Write Standard + UK Open Banking regulatory context
+standards:
+- id: obie-read-write
+  name: OBIE Read/Write API Standard
+  conforms: true
+  evidence: Specs are the Open Banking Read/Write 4.0.1 AIS/PIS/CBPII documents.
+- id: psd2
+  name: PSD2 / UK Open Banking (CMA9 ASPSP)
+  conforms: true
+  evidence: Coutts is an ASPSP within NatWest Group, a CMA9 mandated banking group.
+- id: fapi-1-advanced
+  name: FAPI 1.0 Advanced
+  conforms: true
+  evidence: x-fapi-* headers, mTLS client auth and detached JWS signing per OBIE FAPI profile.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  evidence: 'oauth2 securitySchemes: client_credentials (TPP) + authorization_code (PSU/SCA).'
+- id: oidc
+  name: OpenID Connect
+  conforms: true
+  evidence: OIDC hybrid flow underpins PSU authentication / SCA in the OBIE profile.
+- id: mtls
+  name: Mutual TLS (RFC 8705) / OBIE eIDAS certificates
+  conforms: true
+  evidence: api.coutts.com gateway rejects requests without a client certificate (HTTP 400 No required
+    SSL certificate).
+- id: detached-jws
+  name: Detached JWS (RFC 7515)
+  conforms: true
+  evidence: x-jws-signature header on PIS payloads.
+- id: sca
+  name: PSD2 Strong Customer Authentication
+  conforms: true
+  evidence: PSUOAuth2Security authorization_code flow enforces SCA.
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: Uses the OBIE OBErrorResponse1 envelope, not application/problem+json.

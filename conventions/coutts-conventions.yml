@@ -1,0 +1,67 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/ (OBIE Read/Write 4.0.1) + Open Banking Read/Write Standard conventions
+authentication:
+  style: FAPI 1.0 Advanced OAuth2/OIDC with mutual-TLS client authentication
+  flows:
+  - client_credentials (TPP grant, e.g. scope=accounts|payments|fundsconfirmations)
+  - authorization_code (PSU strong customer authentication / SCA)
+  transport_security: mutual-TLS (OBIE/eIDAS client certificate) required at the api.coutts.com gateway
+  ref: authentication/coutts-authentication.yml
+idempotency:
+  supported: true
+  header: x-idempotency-key
+  scope: Payment Initiation (PIS) write operations — Create*Payments / Create*PaymentConsents where an
+    x-idempotency-key parameter is defined.
+  max_length: 40
+  retention: ASPSP replays the original response for a repeated x-idempotency-key within the idempotency
+    window (OBIE requires a minimum 24 hours).
+  note: AIS and CBPII read operations are naturally idempotent (GET) and do not carry the header.
+message_signing:
+  header: x-jws-signature
+  detail: Detached JWS (RFC 7515) signature over payment request/response payloads for non-repudiation
+    on PIS.
+request_tracing:
+  header: x-fapi-interaction-id
+  detail: FAPI interaction id echoed on the response and reused as the error Id for correlation.
+fapi_headers:
+- x-fapi-auth-date
+- x-fapi-customer-ip-address
+- x-fapi-interaction-id
+- x-customer-user-agent
+pagination:
+  style: links-and-meta
+  params:
+  - page
+  response_fields:
+  - Links.Self
+  - Links.First
+  - Links.Prev
+  - Links.Next
+  - Links.Last
+  - Meta.TotalPages
+  - Meta.FirstAvailableDateTime
+  - Meta.LastAvailableDateTime
+  detail: Transaction and other collection reads page via ?page=N with an OBIE Links + Meta block.
+filtering:
+  params:
+  - fromBookingDateTime
+  - toBookingDateTime
+  - fromStatementDateTime
+  - toStatementDateTime
+  detail: Date-range query filtering on transactions and statements.
+versioning:
+  scheme: uri-path
+  pattern: /open-banking/v{major.minor}/{role}
+  current: v3.1 live / v4.0 spec
+  ref: lifecycle/coutts-lifecycle.yml
+error_envelope:
+  shape: OBErrorResponse1
+  ref: errors/coutts-problem-types.yml
+rate_limit_signaling:
+  status: 429
+  detail: HTTP 429 Too Many Requests returned on throttling; per-TPP limits governed by the ASPSP.
+content_types:
+- application/json
+- application/json; charset=utf-8
+- application/jose+jwe

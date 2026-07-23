@@ -1,0 +1,233 @@
+generated: '2026-07-23'
+method: derived
+status: candidate
+note: No official Coutts / Bank of APIs hosted MCP server was found. Candidate tool list derived 1:1 from
+  the OBIE Read/Write OpenAPI operations. Any real MCP surface would sit behind the same FAPI mTLS + PSD2
+  SCA controls as the REST gateway.
+server:
+  name: coutts
+  transport: http
+  url: null
+tools:
+- name: CreateAccountAccessConsents
+  description: Create an Account Access Consent
+  source_operation: openapi/coutts-account-info-openapi.yaml#CreateAccountAccessConsents
+- name: GetAccountAccessConsentsConsentId
+  description: Get an Account Access Consent
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountAccessConsentsConsentId
+- name: DeleteAccountAccessConsentsConsentId
+  description: Delete an Account Access Consent
+  source_operation: openapi/coutts-account-info-openapi.yaml#DeleteAccountAccessConsentsConsentId
+- name: GetAccounts
+  description: Get Accounts
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccounts
+- name: GetAccountsAccountId
+  description: Get an Account by AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountId
+- name: GetAccountsAccountIdBalances
+  description: Get Balances for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdBalances
+- name: GetAccountsAccountIdBeneficiaries
+  description: Get Beneficiaries for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdBeneficiaries
+- name: GetAccountsAccountIdDirectDebits
+  description: Get Direct Debits for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdDirectDebits
+- name: GetAccountsAccountIdOffers
+  description: Get Offers for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdOffers
+- name: GetAccountsAccountIdParties
+  description: Get Parties for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdParties
+- name: GetAccountsAccountIdParty
+  description: Get Party for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdParty
+- name: GetAccountsAccountIdProduct
+  description: Get Product for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdProduct
+- name: GetAccountsAccountIdScheduledPayments
+  description: Get Scheduled Payments for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdScheduledPayments
+- name: GetAccountsAccountIdStandingOrders
+  description: Get Standing Orders for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdStandingOrders
+- name: GetAccountsAccountIdStatements
+  description: Get Statements for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdStatements
+- name: GetAccountsAccountIdStatementsStatementId
+  description: Get Statement by StatementId for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementId
+- name: GetAccountsAccountIdStatementsStatementIdFile
+  description: Get Statement file by StatementId for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementIdFile
+- name: GetAccountsAccountIdStatementsStatementIdTransactions
+  description: Get Statement Transactions for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementIdTransactions
+- name: GetAccountsAccountIdTransactions
+  description: Get Transactions for an AccountId
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetAccountsAccountIdTransactions
+- name: GetBalances
+  description: Get Balances
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetBalances
+- name: GetBeneficiaries
+  description: Get Beneficiaries
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetBeneficiaries
+- name: GetDirectDebits
+  description: Get Direct Debits
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetDirectDebits
+- name: GetOffers
+  description: Get Offers
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetOffers
+- name: GetParty
+  description: Get Party
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetParty
+- name: GetProducts
+  description: Get Products
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetProducts
+- name: GetScheduledPayments
+  description: Get Scheduled Payments
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetScheduledPayments
+- name: GetStandingOrders
+  description: Get Standing Orders
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetStandingOrders
+- name: GetStatements
+  description: Get Statements
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetStatements
+- name: GetTransactions
+  description: Get Transactions
+  source_operation: openapi/coutts-account-info-openapi.yaml#GetTransactions
+- name: CreateFundsConfirmationConsents
+  description: Create a Funds Confirmation Consent
+  source_operation: openapi/coutts-confirmation-funds-openapi.yaml#CreateFundsConfirmationConsents
+- name: GetFundsConfirmationConsentsConsentId
+  description: Get a Funds Confirmation Consent
+  source_operation: openapi/coutts-confirmation-funds-openapi.yaml#GetFundsConfirmationConsentsConsentId
+- name: DeleteFundsConfirmationConsentsConsentId
+  description: Delete a Funds Confirmation Consent
+  source_operation: openapi/coutts-confirmation-funds-openapi.yaml#DeleteFundsConfirmationConsentsConsentId
+- name: CreateFundsConfirmations
+  description: Create a Funds Confirmation Request
+  source_operation: openapi/coutts-confirmation-funds-openapi.yaml#CreateFundsConfirmations
+- name: CreateDomesticPaymentConsents
+  description: Create a Domestic Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticPaymentConsents
+- name: GetDomesticPaymentConsentsConsentId
+  description: Get a Domestic Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticPaymentConsentsConsentId
+- name: GetDomesticPaymentConsentsConsentIdFundsConfirmation
+  description: Confirm availability of funds for a Domestic Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticPaymentConsentsConsentIdFundsConfirmation
+- name: CreateDomesticPayments
+  description: Initiate a Domestic Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticPayments
+- name: GetDomesticPaymentsDomesticPaymentId
+  description: Get a Domestic Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticPaymentsDomesticPaymentId
+- name: GetDomesticPaymentsDomesticPaymentIdPaymentDetails
+  description: Get details of a Domestic Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticPaymentsDomesticPaymentIdPaymentDetails
+- name: CreateDomesticScheduledPaymentConsents
+  description: Create a Domestic Scheduled Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticScheduledPaymentConsents
+- name: GetDomesticScheduledPaymentConsentsConsentId
+  description: Get a Domestic Scheduled Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentConsentsConsentId
+- name: CreateDomesticScheduledPayments
+  description: Initiate a Domestic Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticScheduledPayments
+- name: GetDomesticScheduledPaymentsDomesticScheduledPaymentId
+  description: Get a Domestic Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentsDomesticScheduledPaymentId
+- name: GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails
+  description: Get details of a Domestic Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails
+- name: CreateDomesticStandingOrderConsents
+  description: Create a Domestic Standing Order Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticStandingOrderConsents
+- name: GetDomesticStandingOrderConsentsConsentId
+  description: Get a Domestic Standing Order Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticStandingOrderConsentsConsentId
+- name: CreateDomesticStandingOrders
+  description: Submit a Domestic Standing Order
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateDomesticStandingOrders
+- name: GetDomesticStandingOrdersDomesticStandingOrderId
+  description: Get a Domestic Standing Order
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticStandingOrdersDomesticStandingOrderId
+- name: GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails
+  description: Get details of a Domestic Standing Order Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails
+- name: CreateFilePaymentConsents
+  description: Create a File Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateFilePaymentConsents
+- name: GetFilePaymentConsentsConsentId
+  description: Get a File Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetFilePaymentConsentsConsentId
+- name: CreateFilePaymentConsentsConsentIdFile
+  description: Upload a File for a ConsentId
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateFilePaymentConsentsConsentIdFile
+- name: GetFilePaymentConsentsConsentIdFile
+  description: Get a File Payment Consent's Uploaded File
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetFilePaymentConsentsConsentIdFile
+- name: CreateFilePayments
+  description: Submit a File Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateFilePayments
+- name: GetFilePaymentsFilePaymentId
+  description: Get a File Payment by FilePaymentId
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentId
+- name: GetFilePaymentsFilePaymentIdPaymentDetails
+  description: Get payment details for a File Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentIdPaymentDetails
+- name: GetFilePaymentsFilePaymentIdReportFile
+  description: Get a File Payment's Report File
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentIdReportFile
+- name: CreateInternationalPaymentConsents
+  description: Create an International Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalPaymentConsents
+- name: GetInternationalPaymentConsentsConsentId
+  description: Get an International Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalPaymentConsentsConsentId
+- name: GetInternationalPaymentConsentsConsentIdFundsConfirmation
+  description: Confirm Funds Availability for an International Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalPaymentConsentsConsentIdFundsConfirmation
+- name: CreateInternationalPayments
+  description: Initiate an International Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalPayments
+- name: GetInternationalPaymentsInternationalPaymentId
+  description: Get an International Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalPaymentsInternationalPaymentId
+- name: GetInternationalPaymentsInternationalPaymentIdPaymentDetails
+  description: Get details of an International Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalPaymentsInternationalPaymentIdPaymentDetails
+- name: CreateInternationalScheduledPaymentConsents
+  description: Create an International Scheduled Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalScheduledPaymentConsents
+- name: GetInternationalScheduledPaymentConsentsConsentId
+  description: Get an International Scheduled Payment Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentConsentsConsentId
+- name: GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmation
+  description: Confirm Funds Availability for an International Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmation
+- name: CreateInternationalScheduledPayments
+  description: Initiate an International Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalScheduledPayments
+- name: GetInternationalScheduledPaymentsInternationalScheduledPaymentId
+  description: Get an International Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentsInternationalScheduledPaymentId
+- name: GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails
+  description: Get details of an International Scheduled Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails
+- name: CreateInternationalStandingOrderConsents
+  description: Create an International Standing Order Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalStandingOrderConsents
+- name: GetInternationalStandingOrderConsentsConsentId
+  description: Get an International Standing Order Consent
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalStandingOrderConsentsConsentId
+- name: CreateInternationalStandingOrders
+  description: Submit an International Standing Order
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#CreateInternationalStandingOrders
+- name: GetInternationalStandingOrdersInternationalStandingOrderPaymentId
+  description: Get an International Standing Order
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalStandingOrdersInternationalStandingOrderPaymentId
+- name: GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails
+  description: Get details of an International Standing Order Payment
+  source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails

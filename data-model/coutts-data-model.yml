@@ -1,0 +1,131 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/ (OBIE Read/Write 4.0.1 resource paths + $ref graph)
+note: Entity graph derived from the OBIE Read/Write resource hierarchy. In AIS every resource hangs off
+  an Account, which itself hangs off an authorised account-access Consent. In PIS/CBPII each payment/confirmation
+  resource belongs to its own consent.
+entities:
+- name: AccountAccessConsent
+  api: aisp
+  id: ConsentId
+  relationships:
+  - type: has_many
+    target: Account
+    via: consent-grants
+- name: Account
+  api: aisp
+  id: AccountId
+  relationships:
+  - type: belongs_to
+    target: AccountAccessConsent
+    via: ConsentId
+  - type: has_many
+    target: Balance
+    via: AccountId
+  - type: has_many
+    target: Transaction
+    via: AccountId
+  - type: has_many
+    target: Beneficiary
+    via: AccountId
+  - type: has_many
+    target: DirectDebit
+    via: AccountId
+  - type: has_many
+    target: StandingOrder
+    via: AccountId
+  - type: has_many
+    target: ScheduledPayment
+    via: AccountId
+  - type: has_many
+    target: Statement
+    via: AccountId
+  - type: has_many
+    target: Party
+    via: AccountId
+  - type: has_one
+    target: Product
+    via: AccountId
+  - type: has_many
+    target: Offer
+    via: AccountId
+- name: Statement
+  api: aisp
+  id: StatementId
+  relationships:
+  - type: belongs_to
+    target: Account
+    via: AccountId
+  - type: has_many
+    target: Transaction
+    via: StatementId
+- name: DomesticPaymentConsent
+  api: pisp
+  id: ConsentId
+  relationships:
+  - type: has_one
+    target: DomesticPayment
+    via: ConsentId
+- name: DomesticPayment
+  api: pisp
+  id: DomesticPaymentId
+  relationships:
+  - type: belongs_to
+    target: DomesticPaymentConsent
+    via: ConsentId
+- name: DomesticScheduledPayment
+  api: pisp
+  id: DomesticScheduledPaymentId
+  relationships:
+  - type: belongs_to
+    target: DomesticScheduledPaymentConsent
+    via: ConsentId
+- name: DomesticStandingOrder
+  api: pisp
+  id: DomesticStandingOrderId
+  relationships:
+  - type: belongs_to
+    target: DomesticStandingOrderConsent
+    via: ConsentId
+- name: FilePayment
+  api: pisp
+  id: FilePaymentId
+  relationships:
+  - type: belongs_to
+    target: FilePaymentConsent
+    via: ConsentId
+- name: InternationalPayment
+  api: pisp
+  id: InternationalPaymentId
+  relationships:
+  - type: belongs_to
+    target: InternationalPaymentConsent
+    via: ConsentId
+- name: InternationalScheduledPayment
+  api: pisp
+  id: InternationalScheduledPaymentId
+  relationships:
+  - type: belongs_to
+    target: InternationalScheduledPaymentConsent
+    via: ConsentId
+- name: InternationalStandingOrder
+  api: pisp
+  id: InternationalStandingOrderPaymentId
+  relationships:
+  - type: belongs_to
+    target: InternationalStandingOrderConsent
+    via: ConsentId
+- name: FundsConfirmationConsent
+  api: cbpii
+  id: ConsentId
+  relationships:
+  - type: has_many
+    target: FundsConfirmation
+    via: ConsentId
+- name: FundsConfirmation
+  api: cbpii
+  id: FundsConfirmationId
+  relationships:
+  - type: belongs_to
+    target: FundsConfirmationConsent
+    via: ConsentId

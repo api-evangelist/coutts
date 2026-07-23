@@ -1,0 +1,37 @@
+# Coutts
+
+> Coutts & Co is a British private bank and wealth manager founded in 1692, a wholly owned subsidiary of NatWest Group (a UK CMA9 banking group). As an Account Servicing Payment Service Provider (ASPSP) it participates in UK Open Banking under PSD2, exposing OBIE Read/Write Account & Transaction (AIS), Payment Initiation (PIS) and Confirmation of Funds (CBPII) APIs plus OBIE Open Data. The production gateway (api.coutts.com) is mutual-TLS gated and secured with FAPI 1.0 Advanced OAuth2/OIDC and PSD2 strong customer authentication; the developer surface is published through NatWest Group's "Bank of APIs" platform.
+
+## APIs
+
+- [Account and Transaction Information API (AIS)](https://www.bankofapis.com/products/coutts-open-banking): OBIE Read/Write AIS — accounts, balances, transactions, parties, standing orders, direct debits, beneficiaries, products, statements. Base: https://api.coutts.com/open-banking/v3.1/aisp
+- [Payment Initiation API (PIS)](https://www.bankofapis.com/products/coutts-open-banking): OBIE Read/Write PIS — domestic, scheduled, standing-order, international and file payments. Base: https://api.coutts.com/open-banking/v3.1/pisp
+- [Confirmation of Funds API (CBPII)](https://www.bankofapis.com/products/coutts-open-banking): OBIE Read/Write CBPII — funds availability check. Base: https://api.coutts.com/open-banking/v3.1/cbpii
+- [Open Data API](https://www.bankofapis.com/products/coutts-open-banking): OBIE Open Data reference data for business/commercial current accounts.
+
+## Specs
+
+- [AIS OpenAPI](openapi/coutts-account-info-openapi.yaml): OBIE Read/Write 4.0.1, 29 operations.
+- [PIS OpenAPI](openapi/coutts-payment-initiation-openapi.yaml): OBIE Read/Write 4.0.1, 41 operations.
+- [CBPII OpenAPI](openapi/coutts-confirmation-funds-openapi.yaml): OBIE Read/Write 4.0.1, 4 operations.
+
+## Artifacts
+
+- [Authentication](authentication/coutts-authentication.yml): FAPI OAuth2 — client_credentials (TPP) + authorization_code (PSU/SCA).
+- [OAuth Scopes](scopes/coutts-scopes.yml): accounts, payments, fundsconfirmations.
+- [Conventions](conventions/coutts-conventions.yml): idempotency (x-idempotency-key), detached JWS signing, FAPI headers, pagination, versioning.
+- [Error Catalog](errors/coutts-problem-types.yml): OBIE OBErrorResponse1 envelope + UK.OBIE.* error codes.
+- [Conformance](conformance/coutts-conformance.yml): OBIE Read/Write, PSD2, FAPI 1.0 Advanced, OAuth2/OIDC, mTLS, detached JWS, SCA.
+- [Data Model](data-model/coutts-data-model.yml): consent -> account -> resource entity graph.
+- [Lifecycle](lifecycle/coutts-lifecycle.yml): uri-path versioning, status page, sandbox.
+- [Agentic Access](agentic-access/coutts-agentic-access.yml): per-operation x-agentic-access execution contracts.
+- [Agent Skills](skills/_index.yml): retrieve account info, initiate domestic payment, confirm funds.
+
+## Docs
+
+- [Developer Portal (Bank of APIs)](https://www.bankofapis.com/products/coutts-open-banking)
+- [Documentation](https://www.bankofapis.com/documentation)
+- [Getting Started](https://www.bankofapis.com/get-started)
+- [Sandbox](https://developer.coutts.useinfinite.io/)
+- [Status Page](https://www.bankofapis.com/performance/service-interruptions)
+- [Vulnerability Disclosure (NatWest Group)](https://bugcrowd.com/natwest-vdp)
