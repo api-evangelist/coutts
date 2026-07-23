@@ -1,0 +1,111 @@
+aid: coutts
+name: Coutts
+review:
+  question: >-
+    Does Coutts expose a documented public API surface, and what is its UK Open
+    Banking posture (developer portal, confirmed Open Data endpoint, Read/Write
+    OBIE conformance and authentication model)?
+  answer: true
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Coutts & Co is a British private bank and wealth manager, wholly owned by
+    NatWest Group (a UK CMA9 group). It is FCA/PRA authorised (FCA Firm
+    Reference 001b000000MfEueAAF) and participates in UK Open Banking under
+    PSD2 as an ASPSP. Coutts does NOT run a standalone developer portal; its
+    Open Banking APIs are published and documented through NatWest Group's
+    "Bank of APIs" platform, at the Coutts product page
+    https://www.bankofapis.com/products/coutts-open-banking (HTTP 200). A
+    separate Open Banking sandbox portal also exists at
+    https://developer.coutts.useinfinite.io/ (HTTP 200).
+
+    A live production OBIE Read/Write gateway host was confirmed at
+    https://api.coutts.com/ . Every probed path on that host returns
+    "HTTP 400 - No required SSL certificate was sent", i.e. the gateway is
+    mutual-TLS gated and demands an OBIE/eIDAS client certificate before it
+    will route a request. This is the expected FAPI posture for the OBIE
+    Read/Write APIs (Account & Transaction / AIS, Payment Initiation / PIS,
+    Confirmation of Funds / CBPII), which additionally require FAPI-grade
+    OAuth2/OIDC and PSD2 strong customer authentication, plus TPP onboarding.
+
+    Open Data: as a private bank Coutts operates no retail ATM or branch
+    network, so it publishes product reference data (business/commercial
+    current accounts) rather than ATM/Branch locator data. NO unauthenticated
+    Open Data 200 was confirmed: the api.coutts.com host mutual-TLS gates all
+    paths, and no alternate public Open Data host resolved (openbanking.coutts.com
+    and secure.coutts.com did not resolve; www.coutts.com/.well-known/open-banking
+    returned 404). The Open Data API is therefore represented as documented per
+    the OBIE Open Data Standard but UNVERIFIED as a live public endpoint.
+
+    Spec provenance: no bank-proprietary OpenAPI contract was found publicly
+    downloadable for Coutts. The OpenAPI documents harvested into openapi/ are
+    the SHARED OBIE Read/Write Standard specifications (Account & Transaction,
+    Payment Initiation, Confirmation of Funds, v4.0.1) from
+    github.com/OpenBankingUK/read-write-api-specs, which Coutts conforms to as
+    an OBIE participant. They are the standard, not a Coutts-specific contract.
+  authModel:
+    standard: OBIE Read/Write API Standard (UK Open Banking, PSD2)
+    oauth: FAPI-grade OAuth2 / OpenID Connect
+    transportSecurity: Mutual-TLS (mTLS) client authentication with OBIE/eIDAS certificates
+    sca: PSD2 Strong Customer Authentication
+    onboarding: TPP registration / developer onboarding via Bank of APIs
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.coutts.com/open-banking/v3.1
+      documented: true
+      note: >-
+        Live production OBIE Read/Write host confirmed. All paths return HTTP 400
+        "No required SSL certificate was sent" - mutual-TLS gated, client
+        certificate required. Exact aisp/pisp/cbpii sub-paths follow the OBIE
+        standard; host is verified, individual endpoint paths not reachable
+        without a client certificate.
+  endpointsProbed:
+    - url: https://api.coutts.com/
+      status: 400
+      note: mTLS required (No required SSL certificate was sent) - host live
+    - url: https://api.coutts.com/open-banking/v2.3/atms
+      status: 400
+      note: mTLS gated
+    - url: https://api.coutts.com/open-banking/v2.3/business-current-accounts
+      status: 400
+      note: mTLS gated
+    - url: https://www.bankofapis.com/products/coutts-open-banking
+      status: 200
+      note: Coutts developer product page on NatWest Group Bank of APIs
+    - url: https://developer.coutts.useinfinite.io/
+      status: 200
+      note: Coutts Open Banking sandbox developer portal
+    - url: https://www.coutts.com/.well-known/open-banking
+      status: 404
+      note: No well-known Open Banking discovery document
+    - url: https://openbanking.coutts.com/open-banking/v2.3/business-current-accounts
+      status: 000
+      note: Host did not resolve
+  openDataConfirmed: false
+  developerPortal: https://www.bankofapis.com/products/coutts-open-banking
+  specProvenance:
+    proprietary: false
+    standard: OBIE Read/Write API Standard v4.0.1 (shared, not a Coutts-specific contract)
+    harvestedFrom: https://github.com/OpenBankingUK/read-write-api-specs
+sources:
+  - url: https://www.bankofapis.com/products/coutts-open-banking
+    type: DeveloperPortal
+    note: Coutts Open Banking product on NatWest Group Bank of APIs (HTTP 200).
+  - url: https://developer.coutts.useinfinite.io/
+    type: Sandbox
+    note: Coutts Open Banking sandbox developer portal (HTTP 200).
+  - url: https://www.openbanking.org.uk/regulated-providers/coutts-company/
+    type: Reference
+    note: Coutts & Co regulated-provider profile; FCA Firm Reference 001b000000MfEueAAF, NatWest Group ownership.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: OpenAPI
+    note: Source of the shared OBIE Read/Write standard specs harvested into openapi/.
+  - url: https://documenter.getpostman.com/view/35240/TVCiUmZV
+    type: APIReference
+    note: Coutts Business Accounts (Open Data) Postman documentation referenced by the Open Banking UK public toolbox.
+actions:
+  openapiHarvested: true
+  openapiProvenance: OBIE Read/Write Standard v4.0.1 (shared standard, labelled as such)
+  apisYmlCreated: true
