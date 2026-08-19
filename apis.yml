@@ -28,7 +28,7 @@ tags:
 - United Kingdom
 created: '2026-07-23'
 modified: '2026-07-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: coutts:coutts-account-transaction-api
   name: Coutts Account and Transaction Information API
