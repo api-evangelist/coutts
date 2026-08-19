@@ -231,3 +231,9 @@ tools:
 - name: GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails
   description: Get details of an International Standing Order Payment
   source_operation: openapi/coutts-payment-initiation-openapi.yaml#GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails
+deployment:
+  mode: none
+  verified: derived
+  tools: 74
+  checked: '2026-08-12'
+  source: catalog MCP census
