@@ -15,6 +15,18 @@ description: Coutts & Co is a British private bank and wealth manager founded in
   information for its commercial/business current accounts.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Private Bank
+- Wealth Management
+- Open Banking
+- PSD2
+- OBIE
+- FAPI
+- Payments
+- Account Information
+- United Kingdom
+tags_raw:
 - Financial Services
 - Banking
 - Private Bank
