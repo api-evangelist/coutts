@@ -42,77 +42,14 @@ created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
 apis:
-- aid: coutts:coutts-account-transaction-api
-  name: Coutts Account and Transaction Information API
-  description: OBIE Read/Write Account and Transaction Information (AIS) API for Coutts, letting FCA-authorised
-    AISPs retrieve account, balance, transaction, party, standing order, direct debit, beneficiary, product
-    and statement data with the customer's consent. Conforms to the OBIE Read/Write Standard and is secured
-    with FAPI OAuth2/OIDC, mTLS and PSD2 strong customer authentication.
-  humanURL: https://www.bankofapis.com/products/coutts-open-banking
-  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
-  tags:
-  - Account Information
-  - AIS
-  - Open Banking
-  properties:
-  - type: OpenAPI
-    url: openapi/coutts-account-info-openapi.yaml
-  - type: Documentation
-    url: https://www.bankofapis.com/products/coutts-open-banking
-  - type: APIReference
-    url: https://www.bankofapis.com/documentation
-  - type: Overlay
-    url: overlays/coutts-account-info-overlay.yaml
-- aid: coutts:coutts-payment-initiation-api
-  name: Coutts Payment Initiation API
-  description: OBIE Read/Write Payment Initiation (PIS) API for Coutts, letting FCA-authorised PISPs initiate
-    domestic, scheduled, standing-order, international and file payments on behalf of the account holder.
-    Conforms to the OBIE Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and PSD2 strong
-    customer authentication.
-  humanURL: https://www.bankofapis.com/products/coutts-open-banking
-  baseURL: https://api.coutts.com/open-banking/v3.1/pisp
-  tags:
-  - Payment Initiation
-  - PIS
-  - Payments
-  properties:
-  - type: OpenAPI
-    url: openapi/coutts-payment-initiation-openapi.yaml
-  - type: Documentation
-    url: https://www.bankofapis.com/products/coutts-open-banking
-  - type: APIReference
-    url: https://www.bankofapis.com/documentation
-  - type: Overlay
-    url: overlays/coutts-payment-initiation-overlay.yaml
-- aid: coutts:coutts-confirmation-of-funds-api
-  name: Coutts Confirmation of Funds API
-  description: OBIE Read/Write Confirmation of Funds (CBPII) API for Coutts, letting authorised Card Based
-    Payment Instrument Issuers check whether sufficient funds are available on an account before a transaction.
-    Conforms to the OBIE Read/Write Standard and is secured with FAPI OAuth2/OIDC, mTLS and PSD2 strong
-    customer authentication.
-  humanURL: https://www.bankofapis.com/products/coutts-open-banking
-  baseURL: https://api.coutts.com/open-banking/v3.1/cbpii
-  tags:
-  - Confirmation of Funds
-  - CBPII
-  - Open Banking
-  properties:
-  - type: OpenAPI
-    url: openapi/coutts-confirmation-funds-openapi.yaml
-  - type: Documentation
-    url: https://www.bankofapis.com/products/coutts-open-banking
-  - type: APIReference
-    url: https://www.bankofapis.com/documentation
-  - type: Overlay
-    url: overlays/coutts-confirmation-funds-overlay.yaml
 - aid: coutts:coutts-open-data-api
   name: Coutts Open Data API
-  description: OBIE Open Data API for Coutts publishing PUBLIC, unauthenticated reference data for its
-    commercial/business current account products, following the Open Banking Open Data Standard. As a
-    private bank Coutts operates no retail ATM or branch network, so it publishes product reference data
-    rather than ATM/Branch locator data. Base path shown follows the OBIE Open Data path convention; the
-    exact live open-data URL was not confirmed unauthenticated (the api.coutts.com gateway is mutual-TLS
-    gated).
+  description: >-
+    OBIE Open Data API for Coutts publishing PUBLIC, unauthenticated reference data for its commercial/business
+    current account products, following the Open Banking Open Data Standard. As a private bank Coutts
+    operates no retail ATM or branch network, so it publishes product reference data rather than ATM/Branch
+    locator data. Base path shown follows the OBIE Open Data path convention; the exact live open-data
+    URL was not confirmed unauthenticated (the api.coutts.com gateway is mutual-TLS gated).
   humanURL: https://www.bankofapis.com/products/coutts-open-banking
   baseURL: https://api.coutts.com/open-banking/v2.3/business-current-accounts
   tags:
@@ -124,7 +61,422 @@ apis:
     url: https://www.bankofapis.com/products/coutts-open-banking
   - type: APIReference
     url: https://documenter.getpostman.com/view/35240/TVCiUmZV
+- aid: coutts:coutts-account-access-consents-api
+  name: Coutts Account Access Consents API
+  description: >-
+    The Account Access Consents API from Coutts — 2 operation(s) for account access consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Account Access Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-account-access-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-accounts-api
+  name: Coutts Accounts API
+  description: The Accounts API from Coutts — 2 operation(s) for accounts.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-balances-api
+  name: Coutts Balances API
+  description: The Balances API from Coutts — 2 operation(s) for balances.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Balances
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-balances-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-beneficiaries-api
+  name: Coutts Beneficiaries API
+  description: The Beneficiaries API from Coutts — 2 operation(s) for beneficiaries.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Beneficiaries
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-beneficiaries-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-direct-debits-api
+  name: Coutts Direct Debits API
+  description: The Direct Debits API from Coutts — 2 operation(s) for direct debits.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Direct Debits
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-direct-debits-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-payment-consents-api
+  name: Coutts Domestic Payment Consents API
+  description: >-
+    The Domestic Payment Consents API from Coutts — 3 operation(s) for domestic payment consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-payments-api
+  name: Coutts Domestic Payments API
+  description: The Domestic Payments API from Coutts — 3 operation(s) for domestic payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-scheduled-payment-consents-api
+  name: Coutts Domestic Scheduled Payment Consents API
+  description: >-
+    The Domestic Scheduled Payment Consents API from Coutts — 2 operation(s) for domestic scheduled payment
+    consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Scheduled Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-scheduled-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-scheduled-payments-api
+  name: Coutts Domestic Scheduled Payments API
+  description: >-
+    The Domestic Scheduled Payments API from Coutts — 3 operation(s) for domestic scheduled payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-standing-order-consents-api
+  name: Coutts Domestic Standing Order Consents API
+  description: >-
+    The Domestic Standing Order Consents API from Coutts — 2 operation(s) for domestic standing order
+    consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Standing Order Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-standing-order-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-domestic-standing-orders-api
+  name: Coutts Domestic Standing Orders API
+  description: >-
+    The Domestic Standing Orders API from Coutts — 3 operation(s) for domestic standing orders.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Domestic Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-domestic-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-file-payment-consents-api
+  name: Coutts File Payment Consents API
+  description: The File Payment Consents API from Coutts — 3 operation(s) for file payment consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - File Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-file-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-file-payments-api
+  name: Coutts File Payments API
+  description: The File Payments API from Coutts — 4 operation(s) for file payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - File Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-file-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-funds-confirmation-consents-api
+  name: Coutts Funds Confirmation Consents API
+  description: >-
+    The Funds Confirmation Consents API from Coutts — 2 operation(s) for funds confirmation consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Funds Confirmation Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-funds-confirmation-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-funds-confirmations-api
+  name: Coutts Funds Confirmations API
+  description: The Funds Confirmations API from Coutts — 1 operation(s) for funds confirmations.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Funds Confirmations
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-funds-confirmations-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-payment-consents-api
+  name: Coutts International Payment Consents API
+  description: >-
+    The International Payment Consents API from Coutts — 3 operation(s) for international payment consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-payments-api
+  name: Coutts International Payments API
+  description: The International Payments API from Coutts — 3 operation(s) for international payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-scheduled-payments-api
+  name: Coutts International Scheduled Payments API
+  description: >-
+    The International Scheduled Payments API from Coutts — 3 operation(s) for international scheduled
+    payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-scheduled-payments-consents-api
+  name: Coutts International Scheduled Payments Consents API
+  description: >-
+    The International Scheduled Payments Consents API from Coutts — 3 operation(s) for international scheduled
+    payments consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Scheduled Payments Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-scheduled-payments-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-standing-orders-api
+  name: Coutts International Standing Orders API
+  description: >-
+    The International Standing Orders API from Coutts — 3 operation(s) for international standing orders.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-international-standing-orders-consents-api
+  name: Coutts International Standing Orders Consents API
+  description: >-
+    The International Standing Orders Consents API from Coutts — 2 operation(s) for international standing
+    orders consents.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - International Standing Orders Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-international-standing-orders-consents-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-offers-api
+  name: Coutts Offers API
+  description: The Offers API from Coutts — 2 operation(s) for offers.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Offers
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-offers-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-parties-api
+  name: Coutts Parties API
+  description: The Parties API from Coutts — 3 operation(s) for parties.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Parties
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-parties-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-products-api
+  name: Coutts Products API
+  description: The Products API from Coutts — 2 operation(s) for products.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-products-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-scheduled-payments-api
+  name: Coutts Scheduled Payments API
+  description: The Scheduled Payments API from Coutts — 2 operation(s) for scheduled payments.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-standing-orders-api
+  name: Coutts Standing Orders API
+  description: The Standing Orders API from Coutts — 2 operation(s) for standing orders.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-statements-api
+  name: Coutts Statements API
+  description: The Statements API from Coutts — 5 operation(s) for statements.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Statements
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-statements-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
+- aid: coutts:coutts-transactions-api
+  name: Coutts Transactions API
+  description: The Transactions API from Coutts — 2 operation(s) for transactions.
+  humanURL: https://www.bankofapis.com/products/coutts-open-banking
+  baseURL: https://api.coutts.com/open-banking/v3.1/aisp
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/coutts-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://www.bankofapis.com/products/coutts-open-banking
+  - type: APIReference
+    url: https://www.bankofapis.com/documentation
 common:
+- type: Overlay
+  url: overlays/coutts-account-info-overlay.yaml
+- type: Overlay
+  url: overlays/coutts-payment-initiation-overlay.yaml
+- type: Overlay
+  url: overlays/coutts-confirmation-funds-overlay.yaml
 - type: VulnerabilityDisclosure
   url: security/coutts-vulnerability-disclosure.yml
 - type: DomainSecurity
