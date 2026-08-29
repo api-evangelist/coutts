@@ -483,6 +483,9 @@ apis:
   - type: APIReference
     url: https://www.bankofapis.com/documentation
 common:
+- type: CapabilityMap
+  url: capabilities/coutts-capability-edges.yml
+  name: Coutts Business Capability Map
 - type: Overlay
   url: overlays/coutts-account-info-overlay.yaml
 - type: Overlay
