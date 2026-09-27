@@ -40,7 +40,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Private Bank
 - Wealth Management
@@ -63,6 +63,7 @@ tags_raw:
 - Payments
 - Account Information
 - United Kingdom
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
