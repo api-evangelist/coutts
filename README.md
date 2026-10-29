@@ -1,4 +1,4 @@
-# Coutts (coutts)
+# Coutts
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,121 +64,148 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Coutts & Co is a British private bank and wealth manager founded in 1692, a wholly owned subsidiary of NatWest Group (a UK CMA9 banking group). As an FCA-authorised Account Servicing Payment Service Provider (ASPSP), Coutts participates in UK Open Banking under PSD2, exposing its Read/Write APIs through NatWest Group's "Bank of APIs" developer platform. Those APIs conform to the Open Banking Implementation Entity (OBIE) Read/Write Standard and are secured with FAPI OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication.
+Coutts & Co is a British private bank and wealth manager founded in 1692, headquartered in London and serving high-net-worth individuals, families, commercial and institutional clients. It is a wholly owned subsidiary of NatWest Group (formerly The Royal Bank of Scotland Group), one of the UK CMA9 banking groups mandated to deliver Open Banking. Coutts is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the PRA (FCA Firm Reference 001b000000MfEueAAF). As an Account Servicing Payment Service Provider (ASPSP) it participates in UK Open Banking under PSD2, exposing its account, payment and confirmation-of-funds surfaces through NatWest Group's "Bank of APIs" developer platform. Those Read/Write APIs conform to the Open Banking Implementation Entity (OBIE) Read/Write Standard and are secured with FAPI-grade OAuth2/OIDC, PSD2 strong customer authentication, and mutual-TLS client authentication using OBIE/eIDAS certificates. Coutts additionally publishes OBIE Open Data reference information for its commercial/business current accounts.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Private Bank · Wealth Management · Open Banking · PSD2 · OBIE · FAPI · Payments · Account Information · United Kingdom
 
-## Tags
+## Coutts on APIs.io
 
-- Financial Services
-- Banking
-- Private Bank
-- Wealth Management
-- Open Banking
-- PSD2
-- OBIE
-- FAPI
-- Payments
-- Account Information
-- United Kingdom
+Everything profiled for Coutts is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coutts/](https://apis.io/providers/coutts/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (29)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Coutts Open Data API](https://apis.io/apis/coutts/coutts-open-data-api/) — OBIE Open Data API for Coutts publishing PUBLIC, unauthenticated reference data for its commercial/business current account products, following the Open…
+- [Coutts Account Access Consents API](https://apis.io/apis/coutts/coutts-account-access-consents-api/) — The Account Access Consents API from Coutts — 2 operation(s) for account access consents.
+- [Coutts Accounts API](https://apis.io/apis/coutts/coutts-accounts-api/) — The Accounts API from Coutts — 2 operation(s) for accounts.
+- [Coutts Balances API](https://apis.io/apis/coutts/coutts-balances-api/) — The Balances API from Coutts — 2 operation(s) for balances.
+- [Coutts Beneficiaries API](https://apis.io/apis/coutts/coutts-beneficiaries-api/) — The Beneficiaries API from Coutts — 2 operation(s) for beneficiaries.
+- [Coutts Direct Debits API](https://apis.io/apis/coutts/coutts-direct-debits-api/) — The Direct Debits API from Coutts — 2 operation(s) for direct debits.
+- [Coutts Domestic Payment Consents API](https://apis.io/apis/coutts/coutts-domestic-payment-consents-api/) — The Domestic Payment Consents API from Coutts — 3 operation(s) for domestic payment consents.
+- [Coutts Domestic Payments API](https://apis.io/apis/coutts/coutts-domestic-payments-api/) — The Domestic Payments API from Coutts — 3 operation(s) for domestic payments.
+- [Coutts Domestic Scheduled Payment Consents API](https://apis.io/apis/coutts/coutts-domestic-scheduled-payment-consents-api/) — The Domestic Scheduled Payment Consents API from Coutts — 2 operation(s) for domestic scheduled payment consents.
+- [Coutts Domestic Scheduled Payments API](https://apis.io/apis/coutts/coutts-domestic-scheduled-payments-api/) — The Domestic Scheduled Payments API from Coutts — 3 operation(s) for domestic scheduled payments.
+- [Coutts Domestic Standing Order Consents API](https://apis.io/apis/coutts/coutts-domestic-standing-order-consents-api/) — The Domestic Standing Order Consents API from Coutts — 2 operation(s) for domestic standing order consents.
+- [Coutts Domestic Standing Orders API](https://apis.io/apis/coutts/coutts-domestic-standing-orders-api/) — The Domestic Standing Orders API from Coutts — 3 operation(s) for domestic standing orders.
+- [Coutts File Payment Consents API](https://apis.io/apis/coutts/coutts-file-payment-consents-api/) — The File Payment Consents API from Coutts — 3 operation(s) for file payment consents.
+- [Coutts File Payments API](https://apis.io/apis/coutts/coutts-file-payments-api/) — The File Payments API from Coutts — 4 operation(s) for file payments.
+- [Coutts Funds Confirmation Consents API](https://apis.io/apis/coutts/coutts-funds-confirmation-consents-api/) — The Funds Confirmation Consents API from Coutts — 2 operation(s) for funds confirmation consents.
+- [Coutts Funds Confirmations API](https://apis.io/apis/coutts/coutts-funds-confirmations-api/) — The Funds Confirmations API from Coutts — 1 operation(s) for funds confirmations.
+- [Coutts International Payment Consents API](https://apis.io/apis/coutts/coutts-international-payment-consents-api/) — The International Payment Consents API from Coutts — 3 operation(s) for international payment consents.
+- [Coutts International Payments API](https://apis.io/apis/coutts/coutts-international-payments-api/) — The International Payments API from Coutts — 3 operation(s) for international payments.
+- [Coutts International Scheduled Payments API](https://apis.io/apis/coutts/coutts-international-scheduled-payments-api/) — The International Scheduled Payments API from Coutts — 3 operation(s) for international scheduled payments.
+- [Coutts International Scheduled Payments Consents API](https://apis.io/apis/coutts/coutts-international-scheduled-payments-consents-api/) — The International Scheduled Payments Consents API from Coutts — 3 operation(s) for international scheduled payments consents.
+- [Coutts International Standing Orders API](https://apis.io/apis/coutts/coutts-international-standing-orders-api/) — The International Standing Orders API from Coutts — 3 operation(s) for international standing orders.
+- [Coutts International Standing Orders Consents API](https://apis.io/apis/coutts/coutts-international-standing-orders-consents-api/) — The International Standing Orders Consents API from Coutts — 2 operation(s) for international standing orders consents.
+- [Coutts Offers API](https://apis.io/apis/coutts/coutts-offers-api/) — The Offers API from Coutts — 2 operation(s) for offers.
+- [Coutts Parties API](https://apis.io/apis/coutts/coutts-parties-api/) — The Parties API from Coutts — 3 operation(s) for parties.
+- [Coutts Products API](https://apis.io/apis/coutts/coutts-products-api/) — The Products API from Coutts — 2 operation(s) for products.
+- [Coutts Scheduled Payments API](https://apis.io/apis/coutts/coutts-scheduled-payments-api/) — The Scheduled Payments API from Coutts — 2 operation(s) for scheduled payments.
+- [Coutts Standing Orders API](https://apis.io/apis/coutts/coutts-standing-orders-api/) — The Standing Orders API from Coutts — 2 operation(s) for standing orders.
+- [Coutts Statements API](https://apis.io/apis/coutts/coutts-statements-api/) — The Statements API from Coutts — 5 operation(s) for statements.
+- [Coutts Transactions API](https://apis.io/apis/coutts/coutts-transactions-api/) — The Transactions API from Coutts — 2 operation(s) for transactions.
 
-## APIs
+### Published properties
 
-### Coutts Account and Transaction Information API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-OBIE Read/Write Account and Transaction Information (AIS) API for Coutts, letting FCA-authorised AISPs retrieve account, balance, transaction, party, standing order, direct debit, beneficiary, product and statement data with customer consent. Secured with FAPI OAuth2/OIDC, mTLS and PSD2 SCA.
+#### MCP servers (1)
 
-- **Human URL:** [https://www.bankofapis.com/products/coutts-open-banking](https://www.bankofapis.com/products/coutts-open-banking)
-- **Base URL:** `https://api.coutts.com/open-banking/v3.1/aisp`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [coutts](https://apis.io/servers/coutts/coutts/)
 
-- Account Information
-- AIS
-- Open Banking
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [OpenAPI](openapi/coutts-account-info-openapi.yaml) — OBIE Read/Write Account & Transaction standard spec
-- [Documentation](https://www.bankofapis.com/products/coutts-open-banking)
-- [API Reference](https://www.bankofapis.com/documentation)
+- [Coutts Agentic Access](https://apis.io/agentic-access/coutts/coutts-agentic-access/)
 
-### Coutts Payment Initiation API
+#### Overlays (3)
 
-OBIE Read/Write Payment Initiation (PIS) API for Coutts, letting FCA-authorised PISPs initiate domestic, scheduled, standing-order, international and file payments on behalf of the account holder. Secured with FAPI OAuth2/OIDC, mTLS and PSD2 SCA.
+OpenAPI overlays, including conversational phrasing for each operation.
 
-- **Human URL:** [https://www.bankofapis.com/products/coutts-open-banking](https://www.bankofapis.com/products/coutts-open-banking)
-- **Base URL:** `https://api.coutts.com/open-banking/v3.1/pisp`
+- [Coutts Account Info Overlay](https://apis.io/overlays/coutts/coutts-account-info-overlay/)
+- [Coutts Confirmation Funds Overlay](https://apis.io/overlays/coutts/coutts-confirmation-funds-overlay/)
+- [Coutts Payment Initiation Overlay](https://apis.io/overlays/coutts/coutts-payment-initiation-overlay/)
 
-#### Tags
+#### Security (3)
 
-- Payment Initiation
-- PIS
-- Payments
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Coutts Authentication](https://apis.io/security/coutts/coutts-authentication/)
+- [Coutts Domain Security](https://apis.io/security/coutts/coutts-domain-security/)
+- [Coutts Vulnerability Disclosure](https://apis.io/security/coutts/coutts-vulnerability-disclosure/)
 
-- [OpenAPI](openapi/coutts-payment-initiation-openapi.yaml) — OBIE Read/Write Payment Initiation standard spec
-- [Documentation](https://www.bankofapis.com/products/coutts-open-banking)
-- [API Reference](https://www.bankofapis.com/documentation)
+#### OAuth scopes (1)
 
-### Coutts Confirmation of Funds API
+The permissions the API asks for.
 
-OBIE Read/Write Confirmation of Funds (CBPII) API for Coutts, letting authorised Card Based Payment Instrument Issuers check whether sufficient funds are available before a transaction. Secured with FAPI OAuth2/OIDC, mTLS and PSD2 SCA.
+- [Coutts Scopes](https://apis.io/scopes/coutts/coutts-scopes/)
 
-- **Human URL:** [https://www.bankofapis.com/products/coutts-open-banking](https://www.bankofapis.com/products/coutts-open-banking)
-- **Base URL:** `https://api.coutts.com/open-banking/v3.1/cbpii`
+## Where to find this API
 
-#### Tags
-
-- Confirmation of Funds
-- CBPII
-- Open Banking
-
-#### Properties
-
-- [OpenAPI](openapi/coutts-confirmation-funds-openapi.yaml) — OBIE Read/Write Confirmation of Funds standard spec
-- [Documentation](https://www.bankofapis.com/products/coutts-open-banking)
-- [API Reference](https://www.bankofapis.com/documentation)
-
-### Coutts Open Data API
-
-OBIE Open Data API publishing PUBLIC, unauthenticated reference data for Coutts commercial/business current account products, following the Open Banking Open Data Standard. As a private bank Coutts runs no retail ATM/branch network, so it publishes product reference data rather than ATM/Branch locator data. The exact live open-data URL was not confirmed unauthenticated (the api.coutts.com gateway is mutual-TLS gated).
-
-- **Human URL:** [https://www.bankofapis.com/products/coutts-open-banking](https://www.bankofapis.com/products/coutts-open-banking)
-- **Base URL:** `https://api.coutts.com/open-banking/v2.3/business-current-accounts`
-
-#### Tags
-
-- Open Data
-- Business Current Accounts
-- Open Banking
-
-#### Properties
-
-- [Documentation](https://www.bankofapis.com/products/coutts-open-banking)
-- [API Reference](https://documenter.getpostman.com/view/35240/TVCiUmZV)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.coutts.com/)
-- [Developer Portal](https://www.bankofapis.com/products/coutts-open-banking)
 - [Documentation](https://www.bankofapis.com/documentation)
-- [Sandbox](https://developer.coutts.useinfinite.io/)
-- [GitHub Organization](https://github.com/bankofapis)
-- [LinkedIn](https://www.linkedin.com/company/coutts-and-co)
-- [Blog](https://www.coutts.com/insights.html)
+- [Getting started](https://www.bankofapis.com/get-started)
 - [Support](https://www.coutts.com/help-centre.html)
-- [Status Page](https://www.bankofapis.com/performance/service-interruptions)
-- [Terms of Service](https://www.coutts.com/important-information.html)
-- [Privacy Policy](https://www.coutts.com/privacy-and-cookie-policy.html)
+- [Blog](https://www.coutts.com/insights.html)
+- [Security](https://www.coutts.com/.well-known/security.txt)
+- [Terms of service](https://www.coutts.com/important-information.html)
+- [Privacy policy](https://www.coutts.com/privacy-and-cookie-policy.html)
+- [GitHub](https://github.com/bankofapis)
+- [Status](https://www.bankofapis.com/performance/service-interruptions)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 35.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 49.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 28.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 35.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | verified |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | verified |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 42.5** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coutts/](https://apis.io/providers/coutts/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Coutts: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coutts/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
